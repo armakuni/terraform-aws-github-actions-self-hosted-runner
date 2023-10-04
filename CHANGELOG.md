@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.1.3](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.1.2..v0.1.3) - 2023-10-04
+#### Bug Fixes
+- Formatting - ([621f613](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/621f613ebe7f64045e63f647092e81b0a4e361c9)) - Billie Thompson
+#### Continuous Integration
+- Remove inherited secrets - ([93ab119](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/93ab119e0a3161b250baccccc1bfae86cc35ccac)) - Billie Thompson
+
+- - -
+
 ## [v0.1.2](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.1.1..v0.1.2) - 2023-10-04
 #### Bug Fixes
 - Correct template path - ([f17b343](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/f17b3430c7e4d2eafa2c82a3d846e92f769d89aa)) - Billie Thompson

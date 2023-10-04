@@ -66,15 +66,15 @@ You will need the:
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_ami_name_filter"></a> [ami\_name\_filter](#input\_ami\_name\_filter) | The name filter to use when searching for the AMI to use for the runner | `string` | `"ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"` | no |
-| <a name="input_ami_owner_filter"></a> [ami\_owner\_filter](#input\_ami\_owner\_filter) | The owner filter to use when searching for the AMI to use for the runner | `string` | `"099720109477"` | no |
+| <a name="input_ami_owner_filter"></a> [ami\_owner\_filter](#input\_ami\_owner\_filter) | The owner filter to use when searching for the AMI to use for the runner. The default is canonicals account | `string` | `"099720109477"` | no |
 | <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | AWS Region | `string` | n/a | yes |
 | <a name="input_aws_resource_prefix"></a> [aws\_resource\_prefix](#input\_aws\_resource\_prefix) | Prefix for all resources | `string` | `"gh-act"` | no |
 | <a name="input_aws_vpc_cidr"></a> [aws\_vpc\_cidr](#input\_aws\_vpc\_cidr) | The cidr for the VPC that the runners run in, must have at enough blocks available with a subnet in each Availability Zone, for example 10.68.0.0/16, with a newbits of 8 and a azs\_count of 3 will result in 6 subnets being provisioned in the ranges of 10.68.1.0/24, 10.68.2.0/24, and 10.68.3.0/24 in the private subnet and 10.68.4.0/24, 10.68.5.0/24, and 10.68.6.0/24 in the public subnet, with one private and one public per availability zone. Note the "/24" here, 16+8 == 24, you may also choose different ranges with less tidy ip blocks | <pre>object({<br>    cidr      = string<br>    newbits   = number<br>    azs_count = number<br>  })</pre> | <pre>{<br>  "azs_count": 3,<br>  "cidr": "10.68.0.0/16",<br>  "newbits": 8<br>}</pre> | no |
-| <a name="input_github_app_id"></a> [github\_app\_id](#input\_github\_app\_id) | n/a | `string` | n/a | yes |
-| <a name="input_github_app_install_id"></a> [github\_app\_install\_id](#input\_github\_app\_install\_id) | n/a | `string` | n/a | yes |
+| <a name="input_github_app_id"></a> [github\_app\_id](#input\_github\_app\_id) | This is ID from App in developer settings | `string` | n/a | yes |
+| <a name="input_github_app_install_id"></a> [github\_app\_install\_id](#input\_github\_app\_install\_id) | You can find this in the URL when viewing the installed app in the GitHub UI | `string` | n/a | yes |
 | <a name="input_github_app_key"></a> [github\_app\_key](#input\_github\_app\_key) | The private key of the GitHub App. PEM formatted. | `string` | n/a | yes |
 | <a name="input_github_organisation"></a> [github\_organisation](#input\_github\_organisation) | The github organisation to use | `string` | n/a | yes |
-| <a name="input_userdata_template"></a> [userdata\_template](#input\_userdata\_template) | The script that runs on worker startup, can be used to install additional software | `string` | `"./templates/user-data.sh"` | no |
+| <a name="input_userdata_template"></a> [userdata\_template](#input\_userdata\_template) | The script that runs on worker startup, can be used to install additional software. Defaults to a basic userdata script | `string` | `""` | no |
 
 ## Outputs
 
