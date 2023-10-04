@@ -42,3 +42,6 @@ terraform.rc
 # See: https://terragrunt.gruntwork.io/docs/reference/cli-options/#terragrunt-debug
 terragrunt-debug.tfvars.json
 
+runner-binaries-syncer.zip
+runners.zip
+webhook.zip
