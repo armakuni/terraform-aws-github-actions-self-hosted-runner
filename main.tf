@@ -48,7 +48,7 @@ module "github_runner" {
   syncer_lambda_s3_key  = local.aws_lambda_s3_syncer_key
 
   userdata_template = var.userdata_template
-  ami_owners        = [var.ami_owner_filter] # Canonical's Amazon account ID
+  ami_owners        = [var.ami_owner_filter]
 
   ami_filter = {
     name  = [var.ami_name_filter],

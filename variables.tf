@@ -85,7 +85,7 @@ variable "ami_owner_filter" {
     condition     = length(var.ami_owner_filter) > 0
     error_message = "ami_owner_filter must be set"
   }
-  description = "The owner filter to use when searching for the AMI to use for the runner"
+  description = "The owner filter to use when searching for the AMI to use for the runner. The default is canonicals account"
 }
 
 variable "userdata_template" {
