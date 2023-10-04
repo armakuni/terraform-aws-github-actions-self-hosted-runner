@@ -89,11 +89,7 @@ variable "ami_owner_filter" {
 }
 
 variable "userdata_template" {
-  type    = string
-  default = "./templates/user-data.sh"
-  validation {
-    condition     = can(file(var.userdata_template))
-    error_message = "userdata_template must be set to a valid file, see ./templates/user-data.sh for an example of what this should look like"
-  }
-  description = "The script that runs on worker startup, can be used to install additional software"
+  type        = string
+  default     = ""
+  description = "The script that runs on worker startup, can be used to install additional software. Defaults to a basic userdata script"
 }
