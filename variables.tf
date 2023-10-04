@@ -88,8 +88,18 @@ variable "ami_owner_filter" {
   description = "The owner filter to use when searching for the AMI to use for the runner. The default is canonicals account"
 }
 
-variable "userdata_template" {
+variable "runner_run_as" {
+  type    = string
+  default = "ubuntu"
+  validation {
+    condition     = length(var.runner_run_as) > 0
+    error_message = "input_runner_run_as must be set"
+  }
+  description = "The user to run things as on the host, defaults to ubuntu, as this is the username on the ubuntu AMI, however if you might want to change it to whatever you use, perhaps ec2-user"
+}
+
+variable "additional_install_script" {
   type        = string
   default     = ""
-  description = "The script that runs on worker startup, can be used to install additional software. Defaults to a basic userdata script"
+  description = "A script that will be executed before setup of the runner, this can be used to install additional software, or configure the runner in some way"
 }
