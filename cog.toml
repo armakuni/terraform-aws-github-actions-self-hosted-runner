@@ -4,7 +4,7 @@ ignore_merge_commits = true
 branch_whitelist = ["main"]
 pre_bump_hooks = [
   # In the pipeline, this will be created by a preceding job
-  "mv ../terraform-docs/README.md README.md"
+  "mv ../terraform-docs/README.md README.md || true"
 ]
 post_bump_hooks = [
     "git push",
