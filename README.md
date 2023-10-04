@@ -20,7 +20,7 @@ The app should be installed into your organisation and you should have the follo
 You will need the:
 * App ID
 * App Install ID (you can find this in the URL when viewing the app in the GitHub UI)
-* App Private Key (you can download this from the GitHub, keep it in PEM format)
+* App Private Key (you can download this from GitHub App page, keep it in PEM format)
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
