@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.1.2](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.1.1..v0.1.2) - 2023-10-04
+#### Bug Fixes
+- Correct template path - ([f17b343](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/f17b3430c7e4d2eafa2c82a3d846e92f769d89aa)) - Billie Thompson
+#### Continuous Integration
+- Give push permissions to release - ([dd096c1](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/dd096c1db16b7c302656f3ea77cfbc03e820007d)) - Billie Thompson
+#### Documentation
+- Move the note about the AMI owner to somewhere more visible - ([4dc0bcb](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/4dc0bcb7b4728e7eb252f53770d438ed3fd77dc9)) - Billie Thompson
+- Add a basic example - ([ae82a28](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/ae82a282e898d1b889a54b86b3ff4afba42af32b)) - Billie Thompson
+- Add some better descriptions for the github IDs - ([dd8b8c8](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/dd8b8c80211b8ee55c1ea6a6cb088aad13610443)) - Billie Thompson
+
+- - -
+
 ## [v0.1.1](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.1.0..v0.1.1) - 2023-10-04
 #### Bug Fixes
 - **(deps)** Update hashicorp/aws requirement from ~> 5.18.1 to ~> 5.19.0 - ([850056f](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/850056ffe7f65dd88f03caa192eb9bdd3f7cedbe)) - dependabot[bot]
