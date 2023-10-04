@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.1.0](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/ccf5b148a577588af1db4d8eaab8ac860443f11f..v0.1.0) - 2023-10-04
+#### Build system
+- Do not fail locally - ([b6088bc](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/b6088bc22e689023c9951895cdd88d9c80d96e7d)) - Billie Thompson
+#### Continuous Integration
+- **(deps)** Bump armakuni/github-actions from 0.14.8 to 0.14.9 - ([3cbc777](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/3cbc7774cb6d4f6fbb272ed606a85f135792ad17)) - dependabot[bot]
+- **(deps)** Bump armakuni/github-actions from 0.8.2 to 0.14.8 - ([10c96d5](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/10c96d5d759c98a2b6701c8e7c4a4ec338dc9b1c)) - dependabot[bot]
+- Switch to version of tag-and-release with the initial commit fix - ([b103c58](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/b103c58e849b0899e6ff126ddadae85e07019866)) - Billie Thompson
+#### Miscellaneous Chores
+- **(version)** v1.0.0 - ([082a8da](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/082a8da2aaffca360dffcdcbb48f8fd54a545d0e)) - Billie Thompson
+
+- - -
+
 ## [v1.0.0](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/ccf5b148a577588af1db4d8eaab8ac860443f11f..v1.0.0) - 2023-10-04
 #### Build system
 - Do not fail locally - ([a2d73d3](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/a2d73d30eb98187b219ce0113ff03006116dba27)) - Billie Thompson
