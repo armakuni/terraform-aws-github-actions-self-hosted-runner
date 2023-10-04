@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.1.4](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.1.3..v0.1.4) - 2023-10-04
+#### Bug Fixes
+- Correct typo - ([365a185](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/365a1852f651a0a81e6df7510eb5d304674b8089)) - Billie Thompson
+#### Continuous Integration
+- Ignore downloaded zips - ([b4c17ee](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/b4c17eeab7e5e472e4947017c62a2031aba9649b)) - Billie Thompson
+- Add a demo runner - ([fd09e5e](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/fd09e5e245608cd0b7e61b3be4201861caa2c5a3)) - Billie Thompson
+#### Documentation
+- Correct some odd wording - ([3ee881a](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/3ee881af32ee97509735fb3f0b68b5f8922e3ace)) - Billie Thompson
+
+- - -
+
 ## [v0.1.3](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.1.2..v0.1.3) - 2023-10-04
 #### Bug Fixes
 - Formatting - ([621f613](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/621f613ebe7f64045e63f647092e81b0a4e361c9)) - Billie Thompson
