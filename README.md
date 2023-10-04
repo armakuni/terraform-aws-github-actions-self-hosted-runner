@@ -25,33 +25,58 @@ You will need the:
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.19.0 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 5.0 |
+| <a name="requirement_http"></a> [http](#requirement\_http) | ~> 3.4.0  |
+| <a name="requirement_local"></a> [local](#requirement\_local) | ~> 2.4.0 |
+| <a name="requirement_random"></a> [random](#requirement\_random) | ~> 3.5.1 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | n/a |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 5.19.0 |
+| <a name="provider_github"></a> [github](#provider\_github) | ~> 5.0 |
+| <a name="provider_random"></a> [random](#provider\_random) | ~> 3.5.1 |
 
 ## Modules
 
-No modules.
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_download_lambda"></a> [download\_lambda](#module\_download\_lambda) | philips-labs/github-runner/aws//modules/download-lambda | 4.4.1 |
+| <a name="module_github_runner"></a> [github\_runner](#module\_github\_runner) | philips-labs/github-runner/aws | 4.4.1 |
+| <a name="module_runners_zip"></a> [runners\_zip](#module\_runners\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 3.15.1 |
+| <a name="module_s3_bucket_lambda_sources"></a> [s3\_bucket\_lambda\_sources](#module\_s3\_bucket\_lambda\_sources) | terraform-aws-modules/s3-bucket/aws | 3.15.1 |
+| <a name="module_syncer_zip"></a> [syncer\_zip](#module\_syncer\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 3.15.1 |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | 5.1.2 |
+| <a name="module_webhook_zip"></a> [webhook\_zip](#module\_webhook\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 3.15.1 |
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| [aws_iam_openid_connect_provider.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_openid_connect_provider) | resource |
+| [github_organization_webhook.webhook](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/organization_webhook) | resource |
+| [random_id.webhook_secret](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/id) | resource |
+| [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_github_thumbprint"></a> [github\_thumbprint](#input\_github\_thumbprint) | GitHub OpenID TLS certificate thumbprint (the default is the current value) | `string` | `"6938fd4d98bab03faadb97b34396831e3780aea1"` | no |
+| <a name="input_ami_name_filter"></a> [ami\_name\_filter](#input\_ami\_name\_filter) | The name filter to use when searching for the AMI to use for the runner | `string` | `"ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"` | no |
+| <a name="input_ami_owner_filter"></a> [ami\_owner\_filter](#input\_ami\_owner\_filter) | The owner filter to use when searching for the AMI to use for the runner | `string` | `"099720109477"` | no |
+| <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | AWS Region | `string` | n/a | yes |
+| <a name="input_aws_resource_prefix"></a> [aws\_resource\_prefix](#input\_aws\_resource\_prefix) | Prefix for all resources | `string` | `"gh-act"` | no |
+| <a name="input_aws_vpc_cidr"></a> [aws\_vpc\_cidr](#input\_aws\_vpc\_cidr) | The cidr for the VPC that the runners run in, must have at enough blocks available with a subnet in each Availability Zone, for example 10.68.0.0/16, with a newbits of 8 and a azs\_count of 3 will result in 6 subnets being provisioned in the ranges of 10.68.1.0/24, 10.68.2.0/24, and 10.68.3.0/24 in the private subnet and 10.68.4.0/24, 10.68.5.0/24, and 10.68.6.0/24 in the public subnet, with one private and one public per availability zone. Note the "/24" here, 16+8 == 24, you may also choose different ranges with less tidy ip blocks | <pre>object({<br>    cidr      = string<br>    newbits   = number<br>    azs_count = number<br>  })</pre> | <pre>{<br>  "azs_count": 3,<br>  "cidr": "10.68.0.0/16",<br>  "newbits": 8<br>}</pre> | no |
+| <a name="input_github_app_id"></a> [github\_app\_id](#input\_github\_app\_id) | n/a | `string` | n/a | yes |
+| <a name="input_github_app_install_id"></a> [github\_app\_install\_id](#input\_github\_app\_install\_id) | n/a | `string` | n/a | yes |
+| <a name="input_github_app_key"></a> [github\_app\_key](#input\_github\_app\_key) | The private key of the GitHub App. PEM formatted. | `string` | n/a | yes |
+| <a name="input_github_organisation"></a> [github\_organisation](#input\_github\_organisation) | The github organisation to use | `string` | n/a | yes |
+| <a name="input_userdata_template"></a> [userdata\_template](#input\_userdata\_template) | The script that runs on worker startup, can be used to install additional software | `string` | `"./templates/user-data.sh"` | no |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_arn"></a> [arn](#output\_arn) | n/a |
+No outputs.
 <!-- END_TF_DOCS -->
