@@ -47,7 +47,7 @@ module "github_runner" {
   runners_lambda_s3_key = local.aws_lambda_s3_runners_key
   syncer_lambda_s3_key  = local.aws_lambda_s3_syncer_key
 
-  userdata_template = length(var.userdata_template) > 0 ? var.userdata_template : "${path.module}/templates/user-data.sh}"
+  userdata_template = length(var.userdata_template) > 0 ? var.userdata_template : "${path.module}/templates/user-data.sh"
   ami_owners        = [var.ami_owner_filter]
 
   ami_filter = {
