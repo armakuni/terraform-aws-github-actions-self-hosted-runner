@@ -46,6 +46,8 @@ variable "github_app_id" {
     condition     = length(var.github_app_id) > 0
     error_message = "github_app_id must be set"
   }
+
+  description = "This is ID from App in developer settings"
 }
 
 variable "github_app_install_id" {
@@ -54,6 +56,8 @@ variable "github_app_install_id" {
     condition     = length(var.github_app_install_id) > 0
     error_message = "github_app_install_id must be set"
   }
+
+  description = "You can find this in the URL when viewing the installed app in the GitHub UI"
 }
 
 variable "github_organisation" {
