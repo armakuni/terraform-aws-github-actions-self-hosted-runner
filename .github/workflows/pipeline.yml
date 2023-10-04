@@ -5,14 +5,14 @@ on:
 
 jobs:
   check-conventional-commits:
-    uses: armakuni/github-actions/.github/workflows/check-conventional-commits.yml@v0.8.2
+    uses: armakuni/github-actions/.github/workflows/check-conventional-commits.yml@v0.14.6
 
   lint-pipeline:
-    uses: armakuni/github-actions/.github/workflows/lint-pipeline.yml@v0.10.4
+    uses: armakuni/github-actions/.github/workflows/lint-pipeline.yml@v0.14.6
 
   generate-terraform-docs:
     if: github.ref == 'refs/heads/main'
-    uses: armakuni/github-actions/.github/workflows/generate-terraform-docs.yml@v0.8.2
+    uses: armakuni/github-actions/.github/workflows/generate-terraform-docs.yml@v0.14.6
     with:
       output-file: README.md
       # This artifact is referenced by the cog.toml
@@ -23,7 +23,7 @@ jobs:
     - check-conventional-commits
     - lint-pipeline
     if: github.ref == 'refs/heads/main'
-    uses: armakuni/github-actions/.github/workflows/tag-and-release.yml@v0.8.2
+    uses: armakuni/github-actions/.github/workflows/tag-and-release.yml@v0.14.6
     secrets: inherit
     with:
       download-artifacts: true
