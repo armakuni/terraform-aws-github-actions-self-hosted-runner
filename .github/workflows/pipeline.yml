@@ -26,6 +26,5 @@ jobs:
     uses: armakuni/github-actions/.github/workflows/tag-and-release.yml@v0.14.9
     permissions:
       contents: write
-    secrets: inherit
     with:
       download-artifacts: true
