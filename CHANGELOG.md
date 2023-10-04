@@ -2,6 +2,14 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.1.5](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.1.4..v0.1.5) - 2023-10-04
+#### Bug Fixes
+- Use apt to install things - ([9cbfd4e](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/9cbfd4ed758153b800e74d094d3f0017bee32d7b)) - Billie Thompson
+#### Continuous Integration
+- Allow manual triggers - ([8027eca](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/8027ecae746b4195621b0802b82750fec24ff9a6)) - Billie Thompson
+
+- - -
+
 ## [v0.1.4](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.1.3..v0.1.4) - 2023-10-04
 #### Bug Fixes
 - Correct typo - ([365a185](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/365a1852f651a0a81e6df7510eb5d304674b8089)) - Billie Thompson

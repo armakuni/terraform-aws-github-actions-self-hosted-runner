@@ -65,6 +65,7 @@ You will need the:
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_additional_install_script"></a> [additional\_install\_script](#input\_additional\_install\_script) | A script that will be executed before setup of the runner, this can be used to install additional software, or configure the runner in some way | `string` | `""` | no |
 | <a name="input_ami_name_filter"></a> [ami\_name\_filter](#input\_ami\_name\_filter) | The name filter to use when searching for the AMI to use for the runner | `string` | `"ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"` | no |
 | <a name="input_ami_owner_filter"></a> [ami\_owner\_filter](#input\_ami\_owner\_filter) | The owner filter to use when searching for the AMI to use for the runner. The default is canonicals account | `string` | `"099720109477"` | no |
 | <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | AWS Region | `string` | n/a | yes |
@@ -74,7 +75,7 @@ You will need the:
 | <a name="input_github_app_install_id"></a> [github\_app\_install\_id](#input\_github\_app\_install\_id) | You can find this in the URL when viewing the installed app in the GitHub UI | `string` | n/a | yes |
 | <a name="input_github_app_key"></a> [github\_app\_key](#input\_github\_app\_key) | The private key of the GitHub App. PEM formatted. | `string` | n/a | yes |
 | <a name="input_github_organisation"></a> [github\_organisation](#input\_github\_organisation) | The github organisation to use | `string` | n/a | yes |
-| <a name="input_userdata_template"></a> [userdata\_template](#input\_userdata\_template) | The script that runs on worker startup, can be used to install additional software. Defaults to a basic userdata script | `string` | `""` | no |
+| <a name="input_runner_run_as"></a> [runner\_run\_as](#input\_runner\_run\_as) | The user to run things as on the host, defaults to ubuntu, as this is the username on the ubuntu AMI, however if you might want to change it to whatever you use, perhaps ec2-user | `string` | `"ubuntu"` | no |
 
 ## Outputs
 
