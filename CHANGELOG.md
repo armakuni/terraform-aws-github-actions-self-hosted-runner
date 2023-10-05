@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.1.6](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.1.5..v0.1.6) - 2023-10-05
+#### Bug Fixes
+- Escape parameters in script - ([d912568](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/d912568e2fa2fa4d5a12a1b981c2bfcbb80bf131)) - Billie Thompson
+#### Continuous Integration
+- **(deps)** bump armakuni/github-actions from 0.14.9 to 0.14.10 - ([061ccc2](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/061ccc2aa5c569d552bbc7e47f76f35f56b91cb4)) - dependabot[bot]
+- **(deps)** bump actions/checkout from 2 to 4 - ([b88252f](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/b88252f022eac6990b23b79458f8ce7634aa8459)) - dependabot[bot]
+- Remove more runners - ([af24190](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/af24190c70d2489353ecefe734698304472cda89)) - Billie Thompson
+- Allow any match to trigger run - ([15d688d](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/15d688d4ea5b3f7e62e86cb14e4c2e89d49a8773)) - Billie Thompson
+- Demo should list all the things it wants to match on - ([e75e6e0](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/e75e6e082d5efcadc8681569288c27aa7a2e322b)) - Billie Thompson
+
+- - -
+
 ## [v0.1.5](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.1.4..v0.1.5) - 2023-10-04
 #### Bug Fixes
 - Use apt to install things - ([9cbfd4e](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/9cbfd4ed758153b800e74d094d3f0017bee32d7b)) - Billie Thompson
