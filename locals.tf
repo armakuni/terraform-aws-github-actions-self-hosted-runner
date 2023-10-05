@@ -6,5 +6,5 @@ locals {
 
   az_count       = var.aws_vpc_cidr.azs_count
   azs            = slice(data.aws_availability_zones.available.names, 0, local.az_count)
-  gh_key_pem_b64 = base64encode(var.github_app_key)
+  gh_key_pem_b64 = sensitive(base64encode(var.github_app_key))
 }

@@ -52,14 +52,52 @@ module "github_runner" {
   userdata_pre_install  = var.additional_install_script
   ami_owners            = [var.ami_owner_filter]
 
-  enable_userdata   = true
-  enable_runner_workflow_job_labels_check_all = true
-  userdata_template = "${path.module}/templates/userdata.sh"
+  block_device_mappings = [
+    {
+      device_name           = "/dev/sda1"
+      delete_on_termination = true
+      volume_type           = "gp3"
+      volume_size           = 30
+      encrypted             = true
+      iops                  = null
+      throughput            = null
+      kms_key_id            = null
+      snapshot_id           = null
+    }
+  ]
+
+
+
+  logging_retention_in_days                   = 7
+  enable_userdata                             = true
+  enable_runner_workflow_job_labels_check_all = false
+  userdata_template                           = "${path.module}/templates/userdata.sh"
 
   ami_filter = {
     name  = [var.ami_name_filter],
     state = ["available"]
   }
+
+  runner_log_files = [
+    {
+      "log_group_name" : "syslog",
+      "prefix_log_group" : true,
+      "file_path" : "/var/log/syslog",
+      "log_stream_name" : "{instance_id}"
+    },
+    {
+      "log_group_name" : "user_data",
+      "prefix_log_group" : true,
+      "file_path" : "/var/log/user-data.log",
+      "log_stream_name" : "{instance_id}/user_data"
+    },
+    {
+      "log_group_name" : "runner",
+      "prefix_log_group" : true,
+      "file_path" : "/opt/actions-runner/_diag/Runner_**.log",
+      "log_stream_name" : "{instance_id}/runner"
+    }
+  ]
 }
 
 resource "github_organization_webhook" "webhook" {
@@ -67,7 +105,7 @@ resource "github_organization_webhook" "webhook" {
     "workflow_job",
   ]
   configuration {
-    url          = module.github_runner.webhook["endpoint"]
+    url          = module.github_runner.webhook.endpoint
     content_type = "json"
     secret       = random_id.webhook_secret.hex
   }

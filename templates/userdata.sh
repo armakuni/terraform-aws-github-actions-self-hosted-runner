@@ -16,6 +16,7 @@ ${pre_install}
 
 # Install AWS CLI
 apt-get update
+apt-get upgrade -y
 DEBIAN_FRONTEND=noninteractive apt-get install -y \
     awscli \
     build-essential \
@@ -27,13 +28,17 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y \
     unzip \
     wget
 
-user_name="ubuntu"
-user_id="$(id -ru "$user_name")"
+if [[ "$(lsb_release -rs)" -eq "22.04" ]] ; then
+  sed -i 's/openssl_conf = openssl_init/#openssl_conf = openssl_init/g' /etc/ssl/openssl.cnf
+fi
+
+user_name=ubuntu
+user_id=$(id -ru $user_name)
 
 # install and configure cloudwatch logging agent
 wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb
 dpkg -i -E ./amazon-cloudwatch-agent.deb
-amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c "ssm:${ssm_key_cloudwatch_agent_config}"
+amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c ssm:${ssm_key_cloudwatch_agent_config}
 
 # configure systemd for running service in users accounts
 cat >/etc/systemd/user@UID.service <<-EOF
@@ -62,20 +67,20 @@ systemctl enable user@UID.service
 systemctl start user@UID.service
 
 curl -fsSL https://get.docker.com/rootless >>/opt/rootless.sh && chmod 755 /opt/rootless.sh
-su -l "$user_name" -c /opt/rootless.sh
-echo export DOCKER_HOST="unix:///run/user/$user_id/docker.sock" >>"/home/$user_name/.bashrc"
-echo export PATH="/home/$user_name/bin:$PATH" >>"/home/$user_name/.bashrc"
+su -l $user_name -c /opt/rootless.sh
+echo export DOCKER_HOST=unix:///run/user/$user_id/docker.sock >>/home/$user_name/.bashrc
+echo export PATH=/home/$user_name/bin:$PATH >>/home/$user_name/.bashrc
 
 # Run docker service by default
-loginctl enable-linger "$user_name"
-su -l "$user_name" -c "systemctl --user enable docker"
+loginctl enable-linger $user_name
+su -l $user_name -c "systemctl --user enable docker"
 
 ${install_runner}
 
 # config runner for rootless docker
 cd /opt/actions-runner/
-echo DOCKER_HOST="unix:///run/user/$user_id/docker.sock" >>.env
-echo PATH="/home/$user_name/bin:$PATH" >>.env
+echo DOCKER_HOST=unix:///run/user/$user_id/docker.sock >>.env
+echo PATH=/home/$user_name/bin:$PATH >>.env
 
 ${post_install}
 

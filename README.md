@@ -2,7 +2,7 @@
 
 This module allows you to provision a self hosted runner which scales to 0 when not in use.
 
-It is designed to be a "It just works" wrapper around that fantastic  Philips Labs [terraform-aws-github-runner](https://github.com/philips-labs/terraform-aws-github-runner) module.
+It is designed to be a "It just works" wrapper for debian based amis around that fantastic Philips Labs [terraform-aws-github-runner](https://github.com/philips-labs/terraform-aws-github-runner) module.
 
 To get started, you need to create an organisation level GitHub App. This is a one time process and you can follow the [GitHub documentation](https://docs.github.com/en/developers/apps/creating-a-github-app) to do this.
 
