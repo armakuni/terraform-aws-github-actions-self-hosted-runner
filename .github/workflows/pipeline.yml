@@ -1,6 +1,6 @@
 on:
   push:
-    branches: ['*']
+    branches: [ '*' ]
   pull_request:
   workflow_dispatch:
 
@@ -22,8 +22,8 @@ jobs:
 
   create-release:
     needs:
-    - check-conventional-commits
-    - lint-pipeline
+      - check-conventional-commits
+      - lint-pipeline
     if: github.ref == 'refs/heads/main'
     uses: armakuni/github-actions/.github/workflows/tag-and-release.yml@v0.14.10
     permissions:
@@ -32,8 +32,8 @@ jobs:
       download-artifacts: true
 
   demo:
-    runs-on: [self-hosted, Linux, X64]
+    runs-on: self-hosted
     steps:
-    - uses: actions/checkout@v4
-    - run: echo "Hello world"
+      - uses: actions/checkout@v4
+      - run: echo "Hello world"
 
