@@ -33,7 +33,7 @@ user_id="$(id -ru "$user_name")"
 # install and configure cloudwatch logging agent
 wget https://s3.amazonaws.com/amazoncloudwatch-agent/ubuntu/amd64/latest/amazon-cloudwatch-agent.deb
 dpkg -i -E ./amazon-cloudwatch-agent.deb
-amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c ssm:${ssm_key_cloudwatch_agent_config}
+amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c "ssm:${ssm_key_cloudwatch_agent_config}"
 
 # configure systemd for running service in users accounts
 cat >/etc/systemd/user@UID.service <<-EOF
