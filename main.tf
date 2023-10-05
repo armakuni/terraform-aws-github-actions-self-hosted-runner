@@ -53,6 +53,7 @@ module "github_runner" {
   ami_owners            = [var.ami_owner_filter]
 
   enable_userdata   = true
+  enable_runner_workflow_job_labels_check_all = true
   userdata_template = "${path.module}/templates/userdata.sh"
 
   ami_filter = {
