@@ -30,10 +30,3 @@ jobs:
       contents: write
     with:
       download-artifacts: true
-
-  demo:
-    runs-on: self-hosted
-    steps:
-      - uses: actions/checkout@v4
-      - run: echo "Hello world"
-
