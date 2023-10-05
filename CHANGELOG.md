@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.1.7](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.1.6..v0.1.7) - 2023-10-05
+#### Bug Fixes
+- Correct problem where https requests fail - ([ef79071](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/ef790716b6f2285e5cdf333b8988c11a51125077)) - Billie Thompson
+#### Continuous Integration
+- Use example from gh ui - ([f021a56](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/f021a56460422f89a2741c4bb9faf09ae21376cf)) - Billie Thompson
+- Try capitalising the runs on - ([414e1e6](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/414e1e64d1c0993e056ad33ac67e4b9302d9c446)) - Billie Thompson
+#### Documentation
+- Add a note about public repos - ([fb9e30f](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/fb9e30fed50954c71faf0974f4d5304ae461d26d)) - Billie Thompson
+
+- - -
+
 ## [v0.1.6](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.1.5..v0.1.6) - 2023-10-05
 #### Bug Fixes
 - Escape parameters in script - ([d912568](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/d912568e2fa2fa4d5a12a1b981c2bfcbb80bf131)) - Billie Thompson
