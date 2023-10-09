@@ -1,6 +1,6 @@
 module "download_lambda" {
   source  = "philips-labs/github-runner/aws//modules/download-lambda"
-  version = "4.4.1"
+  version = "4.5.0"
 
   lambdas = [
     {
