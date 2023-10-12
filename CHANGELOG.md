@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.2.0](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.1.9..v0.2.0) - 2023-10-12
+#### Continuous Integration
+- **(deps)** bump armakuni/github-actions from 0.16.3 to 0.16.4 - ([8e18f10](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/8e18f10f88be582136652c57155f2968c90b7f14)) - dependabot[bot]
+- **(deps)** bump armakuni/github-actions from 0.16.2 to 0.16.3 - ([4fc51df](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/4fc51dfb15d6ca60dab3ea7f3e7855e6673ccdf0)) - dependabot[bot]
+#### Features
+- Add ability to disable whole module - ([2dba019](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/2dba019aebcc4a6bb926c9ed89936dc6d0fa05cc)) - Billie Thompson
+
+- - -
+
 ## [v0.1.9](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.1.8..v0.1.9) - 2023-10-09
 #### Bug Fixes
 - **(deps)** bump philips-labs/github-runner/aws from 4.4.1 to 4.5.0 - ([7af4946](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/7af4946ac858c0b2bdc82e07a32cc8c13118a326)) - dependabot[bot]
