@@ -1,4 +1,6 @@
 module "download_lambda" {
+  count = var.enable == true ? 1 : 0
+
   source  = "philips-labs/github-runner/aws//modules/download-lambda"
   version = "4.5.0"
 
@@ -20,6 +22,8 @@ module "download_lambda" {
 
 
 module "s3_bucket_lambda_sources" {
+  count = var.enable == true ? 1 : 0
+
   source  = "terraform-aws-modules/s3-bucket/aws"
   version = "3.15.1"
 
@@ -30,37 +34,43 @@ module "s3_bucket_lambda_sources" {
 
 
 module "webhook_zip" {
-  depends_on = [module.download_lambda, module.s3_bucket_lambda_sources]
+  count = var.enable == true ? 1 : 0
+
+  depends_on = [module.download_lambda[0], module.s3_bucket_lambda_sources[0]]
   source     = "terraform-aws-modules/s3-bucket/aws//modules/object"
   version    = "3.15.1"
 
-  bucket       = module.s3_bucket_lambda_sources.s3_bucket_id
+  bucket       = module.s3_bucket_lambda_sources[0].s3_bucket_id
   key          = local.aws_lambda_s3_webhook_key
   content_type = "application/zip"
 
-  file_source = module.download_lambda.files[0]
+  file_source = module.download_lambda[0].files[0]
 }
 
 module "runners_zip" {
-  depends_on = [module.download_lambda]
+  count = var.enable == true ? 1 : 0
+
+  depends_on = [module.download_lambda[0]]
   source     = "terraform-aws-modules/s3-bucket/aws//modules/object"
   version    = "3.15.1"
 
-  bucket       = module.s3_bucket_lambda_sources.s3_bucket_id
+  bucket       = module.s3_bucket_lambda_sources[0].s3_bucket_id
   key          = local.aws_lambda_s3_runners_key
   content_type = "application/zip"
 
-  file_source = module.download_lambda.files[1]
+  file_source = module.download_lambda[0].files[1]
 }
 
 module "syncer_zip" {
-  depends_on = [module.download_lambda]
+  count = var.enable == true ? 1 : 0
+
+  depends_on = [module.download_lambda[0]]
   source     = "terraform-aws-modules/s3-bucket/aws//modules/object"
   version    = "3.15.1"
 
-  bucket       = module.s3_bucket_lambda_sources.s3_bucket_id
+  bucket       = module.s3_bucket_lambda_sources[0].s3_bucket_id
   key          = local.aws_lambda_s3_syncer_key
   content_type = "application/zip"
 
-  file_source = module.download_lambda.files[2]
+  file_source = module.download_lambda[0].files[2]
 }

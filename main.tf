@@ -1,8 +1,12 @@
 resource "random_id" "webhook_secret" {
+  count = var.enable == true ? 1 : 0
+
   byte_length = 20
 }
 
 module "vpc" {
+  count = var.enable == true ? 1 : 0
+
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.1.2"
 
@@ -23,13 +27,15 @@ module "vpc" {
 
 
 module "github_runner" {
-  depends_on = [module.runners_zip, module.webhook_zip, module.syncer_zip]
+  count = var.enable == true ? 1 : 0
+
+  depends_on = [module.runners_zip[0], module.webhook_zip[0], module.syncer_zip[0]]
   source     = "philips-labs/github-runner/aws"
   version    = "4.5.0"
 
   aws_region                      = var.aws_region
-  vpc_id                          = module.vpc.vpc_id
-  subnet_ids                      = module.vpc.private_subnets
+  vpc_id                          = module.vpc[0].vpc_id
+  subnet_ids                      = module.vpc[0].private_subnets
   create_service_linked_role_spot = true
 
   prefix = var.aws_resource_prefix
@@ -37,7 +43,7 @@ module "github_runner" {
   github_app = {
     id             = var.github_app_id
     key_base64     = local.gh_key_pem_b64
-    webhook_secret = random_id.webhook_secret.hex
+    webhook_secret = random_id.webhook_secret[0].hex
   }
 
   enable_organization_runners = true
@@ -101,12 +107,14 @@ module "github_runner" {
 }
 
 resource "github_organization_webhook" "webhook" {
+  count = var.enable == true ? 1 : 0
+
   events = [
     "workflow_job",
   ]
   configuration {
-    url          = module.github_runner.webhook.endpoint
+    url          = module.github_runner[0].webhook.endpoint
     content_type = "json"
-    secret       = random_id.webhook_secret.hex
+    secret       = random_id.webhook_secret[0].hex
   }
 }

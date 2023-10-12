@@ -103,3 +103,9 @@ variable "additional_install_script" {
   default     = ""
   description = "A script that will be executed before setup of the runner, this can be used to install additional software, or configure the runner in some way"
 }
+
+variable "enable" {
+  type        = bool
+  default     = true
+  description = "Disable or enable everything in this module"
+}
