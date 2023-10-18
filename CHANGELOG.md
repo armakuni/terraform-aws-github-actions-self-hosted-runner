@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.2.2](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.2.1..v0.2.2) - 2023-10-18
+#### Bug Fixes
+- **(deps)** bump philips-labs/github-runner/aws from 4.5.0 to 4.5.1 - ([e373805](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/e37380575f9547783d5d140dec06ae99cf0e6a22)) - dependabot[bot]
+#### Continuous Integration
+- **(deps)** bump armakuni/github-actions from 0.16.8 to 0.16.9 - ([57b37a2](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/57b37a2a5191ec4bbc58d259fd039ad759cd9d48)) - dependabot[bot]
+- **(deps)** bump armakuni/github-actions from 0.16.7 to 0.16.8 - ([cab487b](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/cab487bae2af61b44e52a23ca9fd3bbd8528fb6e)) - dependabot[bot]
+- **(deps)** bump armakuni/github-actions from 0.16.6 to 0.16.7 - ([2c7ee58](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/2c7ee5883ebf21c98351804763fa58a895ca1c9a)) - dependabot[bot]
+- **(deps)** bump armakuni/github-actions from 0.16.5 to 0.16.6 - ([fbe2cd8](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/fbe2cd85d5edea19f62419e3170360d55c7e2193)) - dependabot[bot]
+
+- - -
+
 ## [v0.2.1](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.2.0..v0.2.1) - 2023-10-13
 #### Bug Fixes
 - **(deps)** update hashicorp/aws requirement from ~> 5.20.0 to ~> 5.21.0 - ([fe58950](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/fe58950fe693bf456459549c1bb0982a9f4e087b)) - dependabot[bot]
