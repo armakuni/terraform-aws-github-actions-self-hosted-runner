@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.2.8](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.2.7..v0.2.8) - 2023-10-31
+#### Bug Fixes
+- **(deps)** bump philips-labs/github-runner/aws from 5.1.0 to 5.2.1 - ([c209835](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/c2098359552857540e7f355d702b8434d75d90a2)) - dependabot[bot]
+
+- - -
+
 ## [v0.2.7](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.2.6..v0.2.7) - 2023-10-30
 #### Bug Fixes
 - **(deps)** bump philips-labs/github-runner/aws from 5.0.0 to 5.1.0 - ([5a7d9cf](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/5a7d9cfcac2ed1db828fb3183ef064c233936b32)) - dependabot[bot]
