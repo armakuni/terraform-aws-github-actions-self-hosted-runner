@@ -43,7 +43,7 @@ groups, then clicking on the default group.
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.25.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.26.0 |
 | <a name="requirement_github"></a> [github](#requirement\_github) | ~> 5.0 |
 | <a name="requirement_http"></a> [http](#requirement\_http) | ~> 3.4.0  |
 | <a name="requirement_local"></a> [local](#requirement\_local) | ~> 2.4.0 |
@@ -53,7 +53,7 @@ groups, then clicking on the default group.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 5.25.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 5.26.0 |
 | <a name="provider_github"></a> [github](#provider\_github) | ~> 5.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | ~> 3.5.1 |
 
@@ -61,8 +61,8 @@ groups, then clicking on the default group.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_download_lambda"></a> [download\_lambda](#module\_download\_lambda) | philips-labs/github-runner/aws//modules/download-lambda | 5.4.0 |
-| <a name="module_github_runner"></a> [github\_runner](#module\_github\_runner) | philips-labs/github-runner/aws | 5.4.0 |
+| <a name="module_download_lambda"></a> [download\_lambda](#module\_download\_lambda) | philips-labs/github-runner/aws//modules/download-lambda | 5.4.1 |
+| <a name="module_github_runner"></a> [github\_runner](#module\_github\_runner) | philips-labs/github-runner/aws | 5.4.1 |
 | <a name="module_runners_zip"></a> [runners\_zip](#module\_runners\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 3.15.1 |
 | <a name="module_s3_bucket_lambda_sources"></a> [s3\_bucket\_lambda\_sources](#module\_s3\_bucket\_lambda\_sources) | terraform-aws-modules/s3-bucket/aws | 3.15.1 |
 | <a name="module_syncer_zip"></a> [syncer\_zip](#module\_syncer\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 3.15.1 |
