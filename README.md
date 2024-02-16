@@ -43,8 +43,8 @@ groups, then clicking on the default group.
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.36.0 |
-| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 5.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.37.0 |
+| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 6.0 |
 | <a name="requirement_http"></a> [http](#requirement\_http) | ~> 3.4.0  |
 | <a name="requirement_local"></a> [local](#requirement\_local) | ~> 2.4.0 |
 | <a name="requirement_random"></a> [random](#requirement\_random) | ~> 3.6.0 |
@@ -53,8 +53,8 @@ groups, then clicking on the default group.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 5.36.0 |
-| <a name="provider_github"></a> [github](#provider\_github) | ~> 5.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 5.37.0 |
+| <a name="provider_github"></a> [github](#provider\_github) | ~> 6.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | ~> 3.6.0 |
 
 ## Modules
