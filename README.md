@@ -46,7 +46,7 @@ groups, then clicking on the default group.
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.40.0 |
 | <a name="requirement_github"></a> [github](#requirement\_github) | ~> 6.0 |
 | <a name="requirement_http"></a> [http](#requirement\_http) | ~> 3.4.0  |
-| <a name="requirement_local"></a> [local](#requirement\_local) | ~> 2.4.0 |
+| <a name="requirement_local"></a> [local](#requirement\_local) | ~> 2.5.0 |
 | <a name="requirement_random"></a> [random](#requirement\_random) | ~> 3.6.0 |
 
 ## Providers
