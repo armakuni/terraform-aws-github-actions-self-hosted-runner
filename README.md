@@ -43,7 +43,7 @@ groups, then clicking on the default group.
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.46.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.47.0 |
 | <a name="requirement_github"></a> [github](#requirement\_github) | ~> 6.0 |
 | <a name="requirement_http"></a> [http](#requirement\_http) | ~> 3.4.0  |
 | <a name="requirement_local"></a> [local](#requirement\_local) | ~> 2.5.0 |
@@ -53,7 +53,7 @@ groups, then clicking on the default group.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 5.46.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 5.47.0 |
 | <a name="provider_github"></a> [github](#provider\_github) | ~> 6.0 |
 | <a name="provider_random"></a> [random](#provider\_random) | ~> 3.6.0 |
 
@@ -66,7 +66,7 @@ groups, then clicking on the default group.
 | <a name="module_runners_zip"></a> [runners\_zip](#module\_runners\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 4.1.2 |
 | <a name="module_s3_bucket_lambda_sources"></a> [s3\_bucket\_lambda\_sources](#module\_s3\_bucket\_lambda\_sources) | terraform-aws-modules/s3-bucket/aws | 4.1.2 |
 | <a name="module_syncer_zip"></a> [syncer\_zip](#module\_syncer\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 4.1.2 |
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | 5.8.0 |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | 5.8.1 |
 | <a name="module_webhook_zip"></a> [webhook\_zip](#module\_webhook\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 4.1.2 |
 
 ## Resources
