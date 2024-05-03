@@ -31,7 +31,7 @@ module "github_runner" {
 
   depends_on = [module.runners_zip[0], module.webhook_zip[0], module.syncer_zip[0]]
   source     = "philips-labs/github-runner/aws"
-  version    = "5.10.2"
+  version    = "5.10.3"
 
   aws_region                      = var.aws_region
   vpc_id                          = module.vpc[0].vpc_id
