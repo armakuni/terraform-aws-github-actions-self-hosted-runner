@@ -2,7 +2,7 @@ module "download_lambda" {
   count = var.enable == true ? 1 : 0
 
   source  = "philips-labs/github-runner/aws//modules/download-lambda"
-  version = "5.11.0"
+  version = "5.12.0"
 
   lambdas = [
     {
