@@ -8,7 +8,7 @@ module "vpc" {
   count = var.enable == true ? 1 : 0
 
   source  = "terraform-aws-modules/vpc/aws"
-  version = "5.9.0"
+  version = "5.10.0"
 
   name = "${var.aws_resource_prefix}-vpc"
   cidr = var.aws_vpc_cidr.cidr
