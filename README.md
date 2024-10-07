@@ -63,11 +63,11 @@ groups, then clicking on the default group.
 |------|--------|---------|
 | <a name="module_download_lambda"></a> [download\_lambda](#module\_download\_lambda) | philips-labs/github-runner/aws//modules/download-lambda | 5.16.2 |
 | <a name="module_github_runner"></a> [github\_runner](#module\_github\_runner) | philips-labs/github-runner/aws | 5.16.2 |
-| <a name="module_runners_zip"></a> [runners\_zip](#module\_runners\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 4.1.2 |
-| <a name="module_s3_bucket_lambda_sources"></a> [s3\_bucket\_lambda\_sources](#module\_s3\_bucket\_lambda\_sources) | terraform-aws-modules/s3-bucket/aws | 4.1.2 |
-| <a name="module_syncer_zip"></a> [syncer\_zip](#module\_syncer\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 4.1.2 |
+| <a name="module_runners_zip"></a> [runners\_zip](#module\_runners\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 4.2.0 |
+| <a name="module_s3_bucket_lambda_sources"></a> [s3\_bucket\_lambda\_sources](#module\_s3\_bucket\_lambda\_sources) | terraform-aws-modules/s3-bucket/aws | 4.2.0 |
+| <a name="module_syncer_zip"></a> [syncer\_zip](#module\_syncer\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 4.2.0 |
 | <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | 5.13.0 |
-| <a name="module_webhook_zip"></a> [webhook\_zip](#module\_webhook\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 4.1.2 |
+| <a name="module_webhook_zip"></a> [webhook\_zip](#module\_webhook\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 4.2.0 |
 
 ## Resources
 
