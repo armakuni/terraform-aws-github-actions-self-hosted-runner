@@ -66,7 +66,7 @@ groups, then clicking on the default group.
 | <a name="module_runners_zip"></a> [runners\_zip](#module\_runners\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 4.7.0 |
 | <a name="module_s3_bucket_lambda_sources"></a> [s3\_bucket\_lambda\_sources](#module\_s3\_bucket\_lambda\_sources) | terraform-aws-modules/s3-bucket/aws | 4.7.0 |
 | <a name="module_syncer_zip"></a> [syncer\_zip](#module\_syncer\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 4.7.0 |
-| <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | 5.19.0 |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | 5.21.0 |
 | <a name="module_webhook_zip"></a> [webhook\_zip](#module\_webhook\_zip) | terraform-aws-modules/s3-bucket/aws//modules/object | 4.7.0 |
 
 ## Resources
