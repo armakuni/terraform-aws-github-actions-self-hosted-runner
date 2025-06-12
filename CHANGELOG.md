@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file. See [conventional commits](https://www.conventionalcommits.org/) for commit guidelines.
 
 - - -
+## [v0.2.156](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.2.155..v0.2.156) - 2025-06-12
+#### Bug Fixes
+- **(deps)** update hashicorp/aws requirement from ~> 5.99.1 to ~> 5.100.0 - ([097e635](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/097e63502a6ad64b2cb5375664c9c24becc1772b)) - dependabot[bot]
+
+- - -
+
 ## [v0.2.155](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/compare/v0.2.154..v0.2.155) - 2025-06-05
 #### Bug Fixes
 - **(deps)** bump terraform-aws-modules/s3-bucket/aws - ([4ec2f96](https://github.com/armakuni/terraform-aws-github-actions-oidc-provider/commit/4ec2f96267955c97e0183cf082199d09e2820a84)) - dependabot[bot]
