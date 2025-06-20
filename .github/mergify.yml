@@ -1,16 +1,15 @@
-pull_request_rules:
-- name: Automatic merge when CI passes
-  conditions:
-  - author=dependabot[bot]
-  - check-success=check-conventional-commits / check-conventional-commits
-  actions:
-    queue:
-      method: merge
 
+pull_request_rules:
+  - name: Automatic merge when CI passes
+    conditions: []
+    actions:
+      queue:
 queue_rules:
-- name: dep-update
-  batch_size: 10
-  batch_max_wait_time: 30 min
-  queue_conditions:
-  - author=dependabot[bot]
-  - check-success=check-conventional-commits / check-conventional-commits
+  - name: dep-update
+    batch_size: 10
+    batch_max_wait_time: 30 min
+    queue_conditions:
+      - author=dependabot[bot]
+      - check-success=check-conventional-commits / check-conventional-commits
+    merge_conditions: []
+    merge_method: merge
