@@ -25,7 +25,7 @@ module "s3_bucket_lambda_sources" {
   count = var.enable == true ? 1 : 0
 
   source  = "terraform-aws-modules/s3-bucket/aws"
-  version = "4.11.0"
+  version = "5.0.2"
 
   bucket = local.aws_lambda_s3_bucket_name
 
@@ -38,7 +38,7 @@ module "webhook_zip" {
 
   depends_on = [module.download_lambda[0], module.s3_bucket_lambda_sources[0]]
   source     = "terraform-aws-modules/s3-bucket/aws//modules/object"
-  version    = "4.11.0"
+  version    = "5.0.2"
 
   bucket       = module.s3_bucket_lambda_sources[0].s3_bucket_id
   key          = local.aws_lambda_s3_webhook_key
@@ -52,7 +52,7 @@ module "runners_zip" {
 
   depends_on = [module.download_lambda[0]]
   source     = "terraform-aws-modules/s3-bucket/aws//modules/object"
-  version    = "4.11.0"
+  version    = "5.0.2"
 
   bucket       = module.s3_bucket_lambda_sources[0].s3_bucket_id
   key          = local.aws_lambda_s3_runners_key
@@ -66,7 +66,7 @@ module "syncer_zip" {
 
   depends_on = [module.download_lambda[0]]
   source     = "terraform-aws-modules/s3-bucket/aws//modules/object"
-  version    = "4.11.0"
+  version    = "5.0.2"
 
   bucket       = module.s3_bucket_lambda_sources[0].s3_bucket_id
   key          = local.aws_lambda_s3_syncer_key
